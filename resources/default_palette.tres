@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Palette" format=3 uid="uid://bbojrgxufjo5t"]
+
+[ext_resource type="Script" uid="uid://0unjgq7vn5nw" path="res://scripts/palette.gd" id="1_palette"]
+
+[resource]
+script = ExtResource("1_palette")
+name = "Standard ASCII"
+characters = PackedStringArray(" ", "_", ".", ",", "m", "w", "v", "u", "g", "p", "q", "y", "'", "`", "^", "\"", "~", "*", "T", "Y", "V", "F", "}", ">", ")", "]", "j", "l", "d", "4", "J", "{", "<", "(", "[", "c", "E", "L", "b", "\\", "/", "7", "-", ":", "+", "=", "o", "x", "O", "X", "0", "%", "#", "&", "8", "B", "@", "M", "W", "N")
+lookup_table = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+regional_palette = {
+"bottom": [["'", "`", "^"], ["\"", "~", "*"], ["T", "Y", "V", "F"]],
+"bottom_left": [["'"], ["/"], ["7"]],
+"bottom_right": [["`"], ["\\"], ["F"]],
+"left": [["}", ">"], [")", "]", "j", "l"], ["d", "q", "4", "J"]],
+"middle": [[" ", " "], ["-", ":"], ["+", "=", "~"], ["*", "o", "x", "c"], ["O", "X", "0", "%"], ["#", "&", "8", "B"], ["@", "M", "W", "N"]],
+"right": [["{", "<"], ["(", "[", "c"], ["E", "F", "L", "b"]],
+"top": [["_", ".", ","], ["m", "w", "v", "u"], ["g", "p", "q", "y"]],
+"top_left": [["."], ["\\"], ["d"]],
+"top_right": [[","], ["/"], ["b"]]
+}

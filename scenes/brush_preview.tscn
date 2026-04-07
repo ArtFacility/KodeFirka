@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dt7w25yl0wnoh"]
+
+[ext_resource type="Script" uid="uid://cwhd54j6cf8qu" path="res://scripts/brush_preview.gd" id="1_ppnyk"]
+[ext_resource type="Shader" uid="uid://b7f15g25q54tx" path="res://shaders/brush_preview.gdshader" id="1_rgcr3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppnyk"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.12735459, 0.14597562, 0.086890526, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfqjr"]
+shader = ExtResource("1_rgcr3")
+shader_parameter/size = 0.598000028405
+shader_parameter/opacity = 0.534000025365
+shader_parameter/feathering = 0.8390000398525
+shader_parameter/color = Color(0, 0, 0, 1)
+
+[node name="BrushPreview" type="Control" unique_id=1234821579]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("1_ppnyk")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1393666720]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1994796186]
+material = SubResource("ShaderMaterial_jfqjr")
+layout_mode = 2
+color = Color(0, 0, 0, 1)

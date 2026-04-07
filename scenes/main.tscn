@@ -1,0 +1,274 @@
+[gd_scene format=3 uid="uid://btifyhhm1tajk"]
+
+[ext_resource type="Script" uid="uid://b82st7s258e2j" path="res://scripts/canvas_renderer.gd" id="1_renderer"]
+[ext_resource type="Script" uid="uid://d1ooeh05lkyue" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://ca475hargo23r" path="res://assets/icon.png" id="2_jyhfs"]
+[ext_resource type="Resource" uid="uid://bbojrgxufjo5t" path="res://resources/default_palette.tres" id="2_palette"]
+[ext_resource type="PackedScene" uid="uid://dt7w25yl0wnoh" path="res://scenes/brush_preview.tscn" id="4_tefeu"]
+
+[node name="Main" type="Control" unique_id=264788681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_tbgi4")
+
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=965495794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin1" type="MarginContainer" parent="." unique_id=1908102132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Interface" type="VBoxContainer" parent="Margin1" unique_id=397612114]
+layout_mode = 2
+
+[node name="TopBarPanel" type="Panel" parent="Margin1/Interface" unique_id=708967712]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="TopBarMargin" type="MarginContainer" parent="Margin1/Interface/TopBarPanel" unique_id=1277701795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TopBar" type="HBoxContainer" parent="Margin1/Interface/TopBarPanel/TopBarMargin" unique_id=644515461]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="AppIcon" type="TextureRect" parent="Margin1/Interface/TopBarPanel/TopBarMargin/TopBar" unique_id=1399673746]
+layout_mode = 2
+texture = ExtResource("2_jyhfs")
+expand_mode = 2
+
+[node name="AppNameVer" type="Label" parent="Margin1/Interface/TopBarPanel/TopBarMargin/TopBar" unique_id=189929084]
+layout_mode = 2
+text = "KodeFirka v0.1"
+
+[node name="VSeparator" type="VSeparator" parent="Margin1/Interface/TopBarPanel/TopBarMargin/TopBar" unique_id=1546674424]
+layout_mode = 2
+
+[node name="FileButton" type="MenuButton" parent="Margin1/Interface/TopBarPanel/TopBarMargin/TopBar" unique_id=53479439]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "File"
+
+[node name="OptionsButton" type="Button" parent="Margin1/Interface/TopBarPanel/TopBarMargin/TopBar" unique_id=899883641]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Options"
+
+[node name="HSplit" type="HSplitContainer" parent="Margin1/Interface" unique_id=684186634]
+custom_minimum_size = Vector2(100, 0)
+layout_direction = 1
+layout_mode = 2
+split_offsets = PackedInt32Array(-512)
+split_offset = -512
+
+[node name="SideBarPanel" type="Panel" parent="Margin1/Interface/HSplit" unique_id=31841044]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SideBarMargin" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel" unique_id=1589982832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="SideBar" type="VBoxContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin" unique_id=1950962891]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar" unique_id=980545418]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel" unique_id=1593751480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBox" type="HBoxContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer" unique_id=260885717]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox" unique_id=780478030]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PaletteMargin" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox" unique_id=920364121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBox" type="VBoxContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/PaletteMargin" unique_id=74108849]
+layout_mode = 2
+
+[node name="PaletteLabel" type="Label" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/PaletteMargin/VBox" unique_id=3148192]
+layout_mode = 2
+text = "Palette"
+horizontal_alignment = 1
+
+[node name="PaletteOptionButton" type="OptionButton" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/PaletteMargin/VBox" unique_id=53479435]
+layout_mode = 2
+
+[node name="BrushSizeMargin" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox" unique_id=832012497]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BrushSlider" type="HSlider" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/BrushSizeMargin" unique_id=1241795890]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="BrushSize" type="Label" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/BrushSizeMargin" unique_id=1172974285]
+layout_mode = 2
+text = "Brush size: 10"
+horizontal_alignment = 1
+
+[node name="OpacityMargin" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox" unique_id=1056343017]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="OpacitySlider" type="HSlider" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/OpacityMargin" unique_id=375426968]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="OpacityLabel" type="Label" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/OpacityMargin" unique_id=814241021]
+layout_mode = 2
+text = "Opacity: 10"
+horizontal_alignment = 1
+
+[node name="FeatherMargin" type="MarginContainer" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox" unique_id=361013342]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="FeatherSlider" type="HSlider" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/FeatherMargin" unique_id=1940771091]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="FeatherLabel" type="Label" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/FeatherMargin" unique_id=344457634]
+layout_mode = 2
+text = "Feather: 10"
+horizontal_alignment = 1
+
+[node name="BrushPreview" parent="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox" unique_id=1234821579 instance=ExtResource("4_tefeu")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Margin1/Interface/HSplit" unique_id=639518050]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SubViewport" type="SubViewport" parent="Margin1/Interface/HSplit/SubViewportContainer" unique_id=120386361]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Margin1/Interface/HSplit/SubViewportContainer/SubViewport" unique_id=184774531]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasRenderer" type="Control" parent="Margin1/Interface/HSplit/SubViewportContainer/SubViewport" unique_id=103436227]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_renderer")
+palette = ExtResource("2_palette")
+
+[node name="StatusBarPanel" type="Panel" parent="Margin1/Interface" unique_id=2019275980]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatusBarMargin" type="MarginContainer" parent="Margin1/Interface/StatusBarPanel" unique_id=618774386]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="StatusBar" type="HBoxContainer" parent="Margin1/Interface/StatusBarPanel/StatusBarMargin" unique_id=1762963601]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=87654321]
+title = "Export ASCII Canvas"
+size = Vector2i(600, 400)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.txt")
+
+[connection signal="item_selected" from="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/PaletteMargin/VBox/PaletteOptionButton" to="." method="_on_palette_option_button_item_selected"]
+[connection signal="value_changed" from="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/BrushSizeMargin/BrushSlider" to="." method="_on_brush_slider_value_changed"]
+[connection signal="value_changed" from="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/OpacityMargin/OpacitySlider" to="." method="_on_opacity_slider_value_changed"]
+[connection signal="value_changed" from="Margin1/Interface/HSplit/SideBarPanel/SideBarMargin/SideBar/Panel/MarginContainer/HBox/VBox/FeatherMargin/FeatherSlider" to="." method="_on_feather_slider_value_changed"]
