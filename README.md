@@ -10,6 +10,8 @@ Instead of typical ASCII editors where you place characters one by one, **KodeFi
 
 ## Features
 
+![Showcase](docs/showcase.gif)
+
 ### Core Art Engine
 - **Sub-Pixel Painting**: High-resolution painting onto character cells.
 - **Gradient-Aware Translation**: The engine analyzes ink flow to pick characters that match boundaries and corners (e.g., curves and edges).
