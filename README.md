@@ -24,7 +24,7 @@ Instead of typical ASCII editors where you place characters one by one, **KodeFi
 - **Blur / Softener**: Smooth out harsh edges and intensity gradients locally.
 - **Type Tool**: Type characters directly into the canvas for precise text insertion.
 
-![Color Tool Showcase](docs/colors.gif)
+![Color Tool Showcase](docs/color.gif)
 
 ### Workflows
 - **Palette Picker**: Switch between different character sets (Standard ASCII, Unicode Blocks, etc.) on the fly.
