@@ -25,7 +25,7 @@ Instead of typical ASCII editors where you place characters one by one, **KodeFi
 - **Blur / Softener**: Smooth out harsh edges and intensity gradients locally.
 - **Type Tool**: Type characters directly into the canvas for precise text insertion.
 
-![Color Tool Showcase](docs/color_tool_showcase.gif)
+![Color Tool Showcase](docs/color.gif)
 *(Consider adding a GIF here showcasing the Color Tool and the Blend Modes in action!)*
 
 ### Workflows
