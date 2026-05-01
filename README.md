@@ -11,7 +11,6 @@ Instead of typical ASCII editors where you place characters one by one, **KodeFi
 ## Features
 
 ![Showcase](docs/showcase.gif)
-*(Consider adding a GIF here showing a fast, high-speed drawing process from start to finish)*
 
 ### Core Art Engine
 - **Sub-Pixel Painting**: Just paint with your brush, the app will automatically detect the best character to pick for that space!
@@ -25,8 +24,7 @@ Instead of typical ASCII editors where you place characters one by one, **KodeFi
 - **Blur / Softener**: Smooth out harsh edges and intensity gradients locally.
 - **Type Tool**: Type characters directly into the canvas for precise text insertion.
 
-![Color Tool Showcase](docs/color.gif)
-*(Consider adding a GIF here showcasing the Color Tool and the Blend Modes in action!)*
+![Color Tool Showcase](docs/colors.gif)
 
 ### Workflows
 - **Palette Picker**: Switch between different character sets (Standard ASCII, Unicode Blocks, etc.) on the fly.
