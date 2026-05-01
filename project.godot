@@ -11,15 +11,22 @@ config_version=5
 [application]
 
 config/name="KodeFirka"
-config/version="0.1"
-run/main_scene="uid://btifyhhm1tajk"
+config/version="0.4"
+run/main_scene="res://scenes/project_picker.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+UserSettings="*res://scripts/core/user_settings.gd"
+
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1280
+window/size/viewport_height=920
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+window/vsync/vsync_mode=0
 
 [gui]
 

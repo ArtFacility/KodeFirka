@@ -3,6 +3,7 @@ class_name CanvasData
 
 var width: int
 var height: int
+var color_space: String
 
 var intensity: PackedFloat32Array
 var color: PackedColorArray
@@ -11,15 +12,16 @@ var color: PackedColorArray
 var resolved_chars: PackedByteArray
 var fg_colors: PackedColorArray
 var bg_colors: PackedColorArray
-var override_char: PackedByteArray # 0 = no override
+var override_char: PackedInt32Array # 0 = no override, >0 = Unicode codepoint
 
 # Flags
 var dirty: PackedByteArray # Per-cell flag
 var render_dirty: PackedByteArray # Per-cell flag
 
-func _init(w: int, h: int) -> void:
+func _init(w: int, h: int, c_space: String = "true_color") -> void:
 	width = w
 	height = h
+	color_space = c_space
 	
 	var sub_count = w * 2 * h * 3
 	intensity.resize(sub_count)

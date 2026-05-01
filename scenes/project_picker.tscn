@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dpw5y5186ngj3"]
+
+[ext_resource type="Script" uid="uid://mdd8jhaw8ynk" path="res://scripts/ui/project_picker.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://cwij2f05ktkpn" path="res://resources/default_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://scripts/ui/ascii_reveal_label.gd" id="3_reveal_script"]
+
+[node name="ProjectPicker" type="Control" unique_id=1560945431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="Panel" parent="." unique_id=1316923115]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=409753152]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="SplashBox" type="VBoxContainer" parent="HBoxContainer" unique_id=1962294783]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SplashLabel" type="Label" parent="HBoxContainer/SplashBox" unique_id=752691008]
+unique_name_in_owner = true
+layout_mode = 2
+text = "ASCII"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_reveal_script")
+
+[node name="VersionLabel" type="Label" parent="HBoxContainer/SplashBox" unique_id=839219190]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+text = "v0.1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=828538582]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ActionBox" type="VBoxContainer" parent="HBoxContainer/CenterContainer" unique_id=1364099539]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="NewButton" type="Button" parent="HBoxContainer/CenterContainer/ActionBox" unique_id=837211020]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "New Project"
+
+[node name="OpenButton" type="Button" parent="HBoxContainer/CenterContainer/ActionBox" unique_id=2004318160]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Open Project..."
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/CenterContainer/ActionBox" unique_id=1061881388]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContainer/ActionBox" unique_id=466692422]
+layout_mode = 2
+text = "Recent Projects"
+
+[node name="RecentScroll" type="ScrollContainer" parent="HBoxContainer/CenterContainer/ActionBox" unique_id=1946551090]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RecentContainer" type="VBoxContainer" parent="HBoxContainer/CenterContainer/ActionBox/RecentScroll" unique_id=204438436]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1128759724]
+unique_name_in_owner = true
+title = "Open a File"
+size = Vector2i(600, 400)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.kfirka ; KodeFirka Project")

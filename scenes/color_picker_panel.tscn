@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://we6hk7l2h56t"]
+
+[ext_resource type="Script" uid="uid://leqqngl4r1wd" path="res://scripts/ui/color_picker_panel.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://djnd71nchxmgd" path="res://assets/color.png" id="2_5tcsm"]
+
+[node name="ColorPickerPanel" type="PanelContainer" unique_id=760643365]
+custom_minimum_size = Vector2(0, 50)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1709675249]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=1762548]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=887357955]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/HeaderHBox" unique_id=107042796]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Color:"
+
+[node name="ToggleWheelBtn" type="Button" parent="MarginContainer/VBox/HeaderHBox" unique_id=1749794450]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+button_pressed = true
+icon = ExtResource("2_5tcsm")
+
+[node name="TrueColorPicker" type="ColorPicker" parent="MarginContainer/VBox" unique_id=1890098290]
+unique_name_in_owner = true
+layout_mode = 2
+edit_alpha = false
+
+[node name="Grid256" type="GridContainer" parent="MarginContainer/VBox" unique_id=1569054483]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 16
+
+[node name="Grid16" type="GridContainer" parent="MarginContainer/VBox" unique_id=1570225696]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 8

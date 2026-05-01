@@ -1,30 +1,4 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cwij2f05ktkpn"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
-bg_color = Color(0.117647, 0.12549, 0.145098, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.180392, 0.188235, 0.207843, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-shadow_color = Color(0, 0, 0, 0.2)
-shadow_size = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
-bg_color = Color(0.180392, 0.188235, 0.207843, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.247059, 0.254902, 0.27451, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[gd_resource type="Theme" format=3 uid="uid://cwij2f05ktkpn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
 bg_color = Color(0.227451, 0.235294, 0.254902, 1)
@@ -33,6 +7,18 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.298039, 0.305882, 0.32549, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
+bg_color = Color(0.180392, 0.188235, 0.207843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.247059, 0.254902, 0.27451, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -50,10 +36,66 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="Gradient" id="Gradient_k2ngq"]
+offsets = PackedFloat32Array(0, 0.2934363, 0.66023165, 0.74903476)
+colors = PackedColorArray(0.37254846, 0.61246496, 0.31739476, 1, 1, 1, 1, 0.9078014, 0.39825964, 0.6283451, 0.34536597, 0.9590228, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mwhd1"]
+gradient = SubResource("Gradient_k2ngq")
+width = 20
+height = 20
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2ngq"]
+bg_color = Color(0.29362658, 0.5586414, 0.2762477, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwhd1"]
+bg_color = Color(0.5204022, 0.6454979, 0.43909228, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nva1m"]
+draw_center = false
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.35167214, 0.41441604, 0.34087953, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.117647, 0.12549, 0.145098, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.180392, 0.188235, 0.207843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 4
+
 [resource]
 Button/styles/hover = SubResource("StyleBoxFlat_button_hover")
 Button/styles/normal = SubResource("StyleBoxFlat_button_normal")
 Button/styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+HSlider/icons/grabber = null
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_mwhd1")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_k2ngq")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_mwhd1")
+HSlider/styles/slider = SubResource("StyleBoxFlat_nva1m")
 MenuButton/styles/hover = SubResource("StyleBoxFlat_button_hover")
 MenuButton/styles/normal = SubResource("StyleBoxFlat_button_normal")
 MenuButton/styles/pressed = SubResource("StyleBoxFlat_button_pressed")

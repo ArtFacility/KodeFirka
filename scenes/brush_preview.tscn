@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt7w25yl0wnoh"]
 
-[ext_resource type="Script" uid="uid://cwhd54j6cf8qu" path="res://scripts/brush_preview.gd" id="1_ppnyk"]
+[ext_resource type="Script" uid="uid://cwhd54j6cf8qu" path="res://scripts/ui/brush_preview.gd" id="1_ppnyk"]
 [ext_resource type="Shader" uid="uid://b7f15g25q54tx" path="res://shaders/brush_preview.gdshader" id="1_rgcr3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppnyk"]

@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://0yembjb3he0b"]
+
+[ext_resource type="Script" uid="uid://b6lahd877xxxn" path="res://scripts/ui/new_project_dialog.gd" id="1_script"]
+
+[node name="NewProjectDialog" type="Control" unique_id=1083253889]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=995811450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="Panel" type="Panel" parent="." unique_id=49948383]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -150.0
+offset_right = 180.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1005843339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1670358453]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBox" unique_id=689439044]
+layout_mode = 2
+text = "New Project"
+horizontal_alignment = 1
+
+[node name="WidthRow" type="HBoxContainer" parent="Panel/MarginContainer/VBox" unique_id=78485594]
+layout_mode = 2
+
+[node name="WidthLabel" type="Label" parent="Panel/MarginContainer/VBox/WidthRow" unique_id=1165233958]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Width (chars):"
+
+[node name="WidthSpinBox" type="SpinBox" parent="Panel/MarginContainer/VBox/WidthRow" unique_id=440849974]
+layout_mode = 2
+min_value = 10.0
+max_value = 1000.0
+value = 80.0
+rounded = true
+
+[node name="HeightRow" type="HBoxContainer" parent="Panel/MarginContainer/VBox" unique_id=249597380]
+layout_mode = 2
+
+[node name="HeightLabel" type="Label" parent="Panel/MarginContainer/VBox/HeightRow" unique_id=1531020828]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Height (chars):"
+
+[node name="HeightSpinBox" type="SpinBox" parent="Panel/MarginContainer/VBox/HeightRow" unique_id=677625035]
+layout_mode = 2
+min_value = 5.0
+max_value = 1000.0
+value = 40.0
+rounded = true
+
+[node name="PaletteRow" type="HBoxContainer" parent="Panel/MarginContainer/VBox" unique_id=1930286598]
+layout_mode = 2
+
+[node name="PaletteLabel" type="Label" parent="Panel/MarginContainer/VBox/PaletteRow" unique_id=364505521]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Palette:"
+
+[node name="PaletteOption" type="OptionButton" parent="Panel/MarginContainer/VBox/PaletteRow" unique_id=131465077]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorSpaceRow" type="HBoxContainer" parent="Panel/MarginContainer/VBox" unique_id=648392104]
+layout_mode = 2
+
+[node name="ColorSpaceLabel" type="Label" parent="Panel/MarginContainer/VBox/ColorSpaceRow" unique_id=983112444]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Color Space:"
+
+[node name="ColorSpaceOption" type="OptionButton" parent="Panel/MarginContainer/VBox/ColorSpaceRow" unique_id=138402213]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WarningLabel" type="Label" parent="Panel/MarginContainer/VBox" unique_id=20210412]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+text = "Warning: Massive resolutions will result in a laggy experience!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/MarginContainer/VBox" unique_id=1290875157]
+layout_mode = 2
+alignment = 1
+
+[node name="CreateButton" type="Button" parent="Panel/MarginContainer/VBox/ButtonRow" unique_id=371254125]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 2
+text = "Create"
+
+[node name="CancelButton" type="Button" parent="Panel/MarginContainer/VBox/ButtonRow" unique_id=945800431]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 2
+text = "Cancel"
